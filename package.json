@@ -126,7 +126,6 @@
 	"dependencies": {
 		"@irisnet/irishub-sdk": "git://github.com/irisnet/irishub-sdk-js.git#bsn/202012",
 		"babel-polyfill": "^6.26.0",
-		"gzip-js": "git://github.com/beatgammit/gzip-js.git",
 		"node-zopfli": "^2.1.4"
 	}
 }
