@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as config from '../config/config';
-import { client } from '../client/client';
+import { getClient } from '../client/client';
 import * as zopfli from 'node-zopfli';
 import * as sdk from '@irisnet/irishub-sdk';
 
@@ -48,7 +48,7 @@ export async function deploy(uri?: vscode.Uri) {
   var extConfig = vscode.workspace.getConfiguration();
   try {
     // Fee and gas will be adjusted dynamically in the future.
-    var res:any = await client
+    var res:any = await getClient()
       .contract.storeCode(
         data,
         {},

@@ -84,7 +84,7 @@
 				},
 				"vscode-ext-irita-wasm.denom": {
 					"type": "string",
-					"default": "iris",
+					"default": "point",
 					"description": "denom"
 				},
 				"vscode-ext-irita-wasm.algorithm": {

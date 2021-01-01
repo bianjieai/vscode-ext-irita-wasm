@@ -33,7 +33,7 @@ See [CHANGELOG.md](CHANGELOG.md)
 
 This extension contributes the following settings:
 
-- `Algorithm`: algorithm
+- `Algorithm`: algorithm: sm2 for IRITA, secp256k1 for IRIS
 - `ChainID`: chain ID
 - `Denom`: denom
 - `GasLimit`: gas limit
@@ -72,7 +72,7 @@ if you want to compile a cosmwasm smart contract, right click the directory of t
 
 #### Deploy
 
-To deploy a smart contract, right click the .wasm file and choose 'vscode-ext-irita-wasm: Deploy contract on IRITA'; or open .wasm file, press Ctrl+Shift+P or Cmd+Shift+P and enter 'deploy' to deploy contract.
+Fill in the configuration first, then right click the .wasm file and choose 'vscode-ext-irita-wasm: Deploy contract on IRITA'; or open .wasm file, press Ctrl+Shift+P or Cmd+Shift+P and enter 'deploy' to deploy contract.
 
 ![Deploy](img/deploy.png)
 

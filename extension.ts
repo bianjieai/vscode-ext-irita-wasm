@@ -1,10 +1,9 @@
 import 'babel-polyfill';
 import * as vscode from 'vscode';
+import * as shell from 'child_process';
 import { generate } from './src/commands/generateCmd';
 import { compile } from './src/commands/compileCmd';
 import { deploy } from './src/commands/deployCmd';
-import { clientInit } from './src/client/client';
-import { wasmInit } from './src/wasm/wasm';
 
 export function activate(context: vscode.ExtensionContext) {
   initialize();
@@ -30,11 +29,14 @@ export function activate(context: vscode.ExtensionContext) {
 export function deactivate() {}
 
 function initialize() {
-  try {
-    clientInit();
-  } catch(e) {
-    vscode.window.showInformationMessage(e.toString());
-    console.log("Client init error: ", e);
+  var data = shell.execSync("rustup target list --installed | grep wasm32");
+
+  if (data.length === 0) {
+    try {
+      shell.execSync("rustup target add wasm32");
+    } catch (e) {
+      vscode.window.showErrorMessage(`error: ${e instanceof Error ? e.message : e}`);
+      return;
+    }
   }
-  wasmInit();
 }
