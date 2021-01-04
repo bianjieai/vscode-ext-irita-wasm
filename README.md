@@ -62,7 +62,7 @@ The extension provides the following functionalities which facilitate the whole 
 
 Right click anywhere in the resource manager, and choose 'vscode-ext-irita-wasm: Generate contract template' to generate a template.
 
-![Generate](img/generate.png)
+![Generate](img/generate.mp4)
 
 #### Compile
 
