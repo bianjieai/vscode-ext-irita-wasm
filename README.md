@@ -33,7 +33,7 @@ See [CHANGELOG.md](CHANGELOG.md)
 
 This extension contributes the following settings:
 
-- `Algorithm`: algorithm: sm2 for IRITA, secp256k1 for IRIS
+- `Algorithm`: algorithm: sm2, secp256k1
 - `ChainID`: chain ID
 - `Denom`: denom
 - `GasLimit`: gas limit

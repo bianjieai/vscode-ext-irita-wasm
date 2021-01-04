@@ -21,7 +21,7 @@ export async function compile(uri?: vscode.Uri) {
   vscode.window.showInformationMessage(`Compiling ${fileNameFromPath(fileName)}...`);
 
   try {
-    shell.execSync("cd " + fileName + " && cargo wasm");
+    shell.execSync("cd " + fileName + " && RUSTFLAGS='-C link-arg=-s' cargo wasm");
   } catch (e) {
     vscode.window.showErrorMessage(`Compilation error: ${e instanceof Error ? e.message : e}`);
     return;

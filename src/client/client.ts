@@ -20,5 +20,5 @@ function createClient(node:any, chainId:any , gas:any, mnemonic:any, algorithm:a
 
 export function getClient() {
   let extConfig = vscode.workspace.getConfiguration();
-  return createClient(extConfig.get("vscode-ext-irita-wasm.rpcAddress"), extConfig.get("vscode-ext-irita-wasm.chainID"), extConfig.get("vscode-ext-irita-wasm.gasLimit"), extConfig.get("vscode-ext-irita-wasm.mnemonic"), extConfig.get("vscode-ext-irita-wasm.algorithm"));
+  return createClient(extConfig.get("vscode-ext-irita-wasm.RPCAddress"), extConfig.get("vscode-ext-irita-wasm.chainID"), extConfig.get("vscode-ext-irita-wasm.gasLimit"), extConfig.get("vscode-ext-irita-wasm.mnemonic"), extConfig.get("vscode-ext-irita-wasm.algorithm"));
 }

@@ -21,41 +21,41 @@
 		"theme": "dark"
 	},
 	"activationEvents": [
-		"onCommand:vscode-ext-irita-wasm.deploy",
-		"onCommand:vscode-ext-irita-wasm.compile",
-		"onCommand:vscode-ext-irita-wasm.generate"
+		"onCommand:irita: Deploy contract",
+		"onCommand:irita: Compile contract",
+		"onCommand:irita: Generate contract template"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"menus": {
 			"explorer/context": [
 				{
-					"command": "vscode-ext-irita-wasm.generate",
+					"command": "irita: Generate contract template",
 					"group": "z_commands"
 				},
 				{
-					"command": "vscode-ext-irita-wasm.compile",
+					"command": "irita: Compile contract",
 					"group": "z_commands"
 				},
 				{
 					"when": "resourceExtname == .wasm",
-					"command": "vscode-ext-irita-wasm.deploy",
+					"command": "irita: Deploy contract",
 					"group": "z_commands"
 				}
 			]
 		},
 		"commands": [
 			{
-				"command": "vscode-ext-irita-wasm.generate",
-				"title": "vscode-ext-irita-wasm: Generate contract template."
+				"command": "irita: Generate contract template",
+				"title": "irita: Generate contract template"
 			},
 			{
-				"command": "vscode-ext-irita-wasm.compile",
-				"title": "vscode-ext-irita-wasm: Compile the project."
+				"command": "irita: Compile contract",
+				"title": "irita: Compile contract"
 			},
 			{
-				"command": "vscode-ext-irita-wasm.deploy",
-				"title": "vscode-ext-irita-wasm: Deploy contract on irita."
+				"command": "irita: Deploy contract",
+				"title": "irita: Deploy contract"
 			}
 		],
 		"configuration": {
@@ -67,7 +67,7 @@
 					"default": "irita",
 					"description": "chain ID"
 				},
-				"vscode-ext-irita-wasm.rpcAddress": {
+				"vscode-ext-irita-wasm.RPCAddress": {
 					"type": "string",
 					"default": "http://localhost:26657",
 					"description": "RPC address in the form of http://host:port."
@@ -95,8 +95,8 @@
 						"secp256k1"
 					],
 					"enumDescriptions": [
-						"sm2 for irita",
-						"secp256k1 for iris"
+						"sm2",
+						"secp256k1"
 					]
 				}
 			}
@@ -124,7 +124,7 @@
 		"vscode-test": "^1.4.1"
 	},
 	"dependencies": {
-		"@irisnet/irishub-sdk": "git://github.com/irisnet/irishub-sdk-js.git#bsn/202012",
+		"@irisnet/irishub-sdk": "git://github.com/bianjieai/irita-sdk-js",
 		"babel-polyfill": "^6.26.0",
 		"node-zopfli": "^2.1.4"
 	}

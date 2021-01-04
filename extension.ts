@@ -8,15 +8,15 @@ import { deploy } from './src/commands/deployCmd';
 export function activate(context: vscode.ExtensionContext) {
   initialize();
 
-  const generateCmd = vscode.commands.registerCommand('vscode-ext-irita-wasm.generate', async (uri: vscode.Uri | undefined) =>
+  const generateCmd = vscode.commands.registerCommand('irita: Generate contract template', async (uri: vscode.Uri | undefined) =>
     generate(uri)
   );
 
-  const compileCmd = vscode.commands.registerCommand('vscode-ext-irita-wasm.compile', async (uri: vscode.Uri | undefined) =>
+  const compileCmd = vscode.commands.registerCommand('irita: Compile contract', async (uri: vscode.Uri | undefined) =>
     compile(uri)
   );
 
-  const deployCmd = vscode.commands.registerCommand('vscode-ext-irita-wasm.deploy', async (uri: vscode.Uri | undefined) =>
+  const deployCmd = vscode.commands.registerCommand('irita: Deploy contract', async (uri: vscode.Uri | undefined) =>
     deploy(uri)
   );
 
