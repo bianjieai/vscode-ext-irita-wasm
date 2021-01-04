@@ -37,7 +37,7 @@ This extension contributes the following settings:
 - `ChainID`: chain ID
 - `Denom`: denom
 - `GasLimit`: gas limit
-- `RpcAddress`: RPC address in the form of http://host:port.
+- `RPCAddress`: RPC address in the form of http://host:port.
 - `Mnemonic`: mnemonic of the key to be used
 
 - NOTE!: At present, only mnemonic is supported to import key!
