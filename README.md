@@ -37,7 +37,7 @@ This extension contributes the following settings:
 - `ChainID`: chain ID
 - `Denom`: denom
 - `GasLimit`: gas limit
-- `RpcAddress`: RPC address in the form of http://host:port.
+- `RPCAddress`: RPC address in the form of http://host:port.
 - `Mnemonic`: mnemonic of the key to be used
 
 - NOTE!: At present, only mnemonic is supported to import key!
@@ -62,19 +62,19 @@ The extension provides the following functionalities which facilitate the whole 
 
 Right click anywhere in the resource manager, and choose 'vscode-ext-irita-wasm: Generate contract template' to generate a template.
 
-![Generate](img/generate.png)
+![Generate](img/generate.gif)
 
 #### Compile
 
 if you want to compile a cosmwasm smart contract, right click the directory of the project or any file in the directory, choose 'vscode-ext-irita-wasm: Compile the project' to compile smart contract.The compiled file is in the `target` folder under the project
 
-![Compile](img/compile.png)
+![Compile](img/compile.gif)
 
 #### Deploy
 
 Fill in the configuration first, then right click the .wasm file and choose 'vscode-ext-irita-wasm: Deploy contract on IRITA'; or open .wasm file, press Ctrl+Shift+P or Cmd+Shift+P and enter 'deploy' to deploy contract.
 
-![Deploy](img/deploy.png)
+![Deploy](img/deploy.gif)
 
 ## License
 
